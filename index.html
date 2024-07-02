@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://assets.adobedtm.com/43e08a8c9425/2663591b45b4/launch-6f34454400fa-development.min.js" async></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-56J9DWNX');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56J9DWNX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <h1>Art Gallery</h1>
+        <nav>
+            <a href="#" id="home-link">Home</a>
+            <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gallery">
+            <!-- Paintings will be dynamically added here -->
+        </section>
+
+           <!-- Short films section with Swiper carousel -->
+    <section id="short-films" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="film">
+                    <h3>Film Title 1</h3>
+                    <p>Director: Director Name 1</p>
+                    <video controls>
+                        <source src="https://www.youtube.com/watch?v=5HyZdZ3pF1E" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="film">
+                    <h3>Film Title 2</h3>
+                    <p>Director: Director Name 2</p>
+                    <video controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <!-- Add more films as needed -->
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+
+    <section id="art-commentary">
+        <h2>Art Commentary</h2>
+        <div id="comment-form">
+            <form id="comment-form">
+                <input type="text" id="comment-input" placeholder="Add your comment...">
+                <input type="file" id="image-input">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="comments-container">
+            <!-- Comments will be dynamically added here -->
+        </div>
+    </section>
+    </main>
+
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-modal-content">
+            <span id="close-cart" class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p id="total-price">Total: $0</p>
+            <button id="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

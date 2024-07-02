@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.painting {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.painting img {
+    width: 100%;
+    height: auto;
+}
+
+.painting-details {
+    padding: 15px;
+    flex: 1;
+}
+
+.painting-details h2 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.painting-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.cart-modal-content {
+    padding: 20px;
+}
+
+.cart-modal.show {
+    transform: translateX(0);
+}
+
+.close {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+#checkout-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#checkout-button:hover {
+    background-color: #555;
+}
+
+
+.swiper-container {
+    position: relative; /* Ensure positioning context for absolute positioning of arrows */
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.swiper-slide {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.swiper-button-next {
+    right: 10px;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.swiper-slide .film video {
+    width: 70%; /* Make the video fill the entire width of its container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    display: block; /* Ensure the video is displayed as a block element */
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+#art-commentary {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#art-commentary h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#comment-form {
+    margin-bottom: 20px;
+}
+
+#comment-form input[type="text"],
+#comment-form input[type="file"],
+#comment-form button {
+    margin-right: 10px;
+}
+
+#comment-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#comment-form button:hover {
+    background-color: #0056b3;
+}
+
+#comments-container {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.comment img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
